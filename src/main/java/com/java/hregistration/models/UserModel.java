@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class UserModel {
     
     
@@ -56,6 +56,5 @@ public class UserModel {
     public void setEmail(String email) {
         this.email = email;
     }
-    
     
 }
