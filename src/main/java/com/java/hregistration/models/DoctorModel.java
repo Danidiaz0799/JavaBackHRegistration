@@ -8,8 +8,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "patients")
-public class PatientModel {
+@Table(name = "doctors")
+public class DoctorModel {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,13 +22,13 @@ public class PatientModel {
     private String lastName;
     
     @Column
-    private int age;
+    private String specialties;
     
     @Column
-    private String phone;
+    private String consultingRoom;
     
     @Column
-    private String identification;
+    private String email;
 
     public Long getId() {
         return id;
@@ -50,32 +50,32 @@ public class PatientModel {
         return lastName;
     }
 
-    public void setLastname(String lastName) {
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    public int getAge() {
-        return age;
+    public String getSpecialties() {
+        return specialties;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setSpecialties(String specialties) {
+        this.specialties = specialties;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getConsultingRoom() {
+        return consultingRoom;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setConsultingRoom(String consultingRoom) {
+        this.consultingRoom = consultingRoom;
     }
 
-    public String getIdentification() {
-        return identification;
+    public String getEmail() {
+        return email;
     }
 
-    public void setIdentification(String identification) {
-        this.identification = identification;
+    public void setEmail(String email) {
+        this.email = email;
     }
     
 }
